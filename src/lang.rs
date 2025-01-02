@@ -673,7 +673,7 @@ impl Lang {
     ///
     /// # Example
     /// ```
-    /// use whatlang::Lang;
+    /// use whatlang2::Lang;
     /// assert_eq!(Lang::from_code("ukr"), Some(Lang::Ukr));
     /// ```
     pub fn from_code<S: Into<String>>(code: S) -> Option<Lang> {
@@ -684,18 +684,28 @@ impl Lang {
     ///
     /// # Example
     /// ```
-    /// use whatlang::Lang;
+    /// use whatlang2::Lang;
     /// assert_eq!(Lang::Ukr.code(), "ukr");
     /// ```
     pub fn code(&self) -> &'static str {
         lang_to_code(*self)
+    }
+    /// Convert enum into Google Translate code as a string.
+    ///
+    /// # Example
+    /// ```
+    /// use whatlang2::Lang;
+    /// assert_eq!(Lang::Ukr.code_google(), "uk");
+    /// ```
+    pub fn code_google(&self) -> &'static str {
+        lang_to_google_code(*self)
     }
 
     /// Get a language name in the language itself.
     ///
     /// # Example
     /// ```
-    /// use whatlang::Lang;
+    /// use whatlang2::Lang;
     /// assert_eq!(Lang::Ukr.name(), "Українська");
     /// ```
     pub fn name(self) -> &'static str {
@@ -706,7 +716,7 @@ impl Lang {
     ///
     /// # Example
     /// ```
-    /// use whatlang::Lang;
+    /// use whatlang2::Lang;
     /// assert_eq!(Lang::Deu.eng_name(), "German");
     /// ```
     pub fn eng_name(self) -> &'static str {
@@ -717,7 +727,7 @@ impl Lang {
     ///
     /// # Example
     /// ```
-    /// use whatlang::Lang;
+    /// use whatlang2::Lang;
     /// for lang in Lang::all() {
     ///     println!("{}", lang);
     /// }
