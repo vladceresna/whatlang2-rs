@@ -1,13 +1,13 @@
 [package]
-name = "whatlang"
+name = "whatlang2"
 version = "0.16.4"
-authors = ["Serhii Potapov <blake131313@gmail.com>"]
+authors = ["Vlad Ĉereŝna <vladceresna6@gmail.com>","Serhii Potapov <blake131313@gmail.com>"]
 edition = "2021"
-description = "Fast and lightweight language identification library for Rust."
+description = "Fast and lightweight language identification library for Rust. But codes normalized"
 keywords = ["language", "nlp", "lang", "whatlang", "text"]
 license = "MIT"
-repository = "https://github.com/greyblake/whatlang-rs"
-homepage = "https://github.com/greyblake/whatlang-rs"
+repository = "https://github.com/vladceresna/whatlang2-rs"
+homepage = "https://github.com/vladceresna/whatlang2-rs"
 documentation = "https://docs.rs/whatlang"
 readme = "README.md"
 categories = ["text-processing", "algorithms"]
